@@ -5,7 +5,7 @@ public class Artikl {
     String naziv;
     int cijena;
     String kod;
-    Artikl( ){
+    Artikl(){
         naziv="";
         cijena=0;
         kod="";

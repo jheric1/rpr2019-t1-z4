@@ -7,21 +7,24 @@ public class Supermarket {
     Artikl[] getArtikli(){
         return artikli;
     }
+    int getTr_br_artikala(){
+        return tr_br_artikala;
+    }
     void dodajArtikl(Artikl art){
 
         artikli[tr_br_artikala] = art;
-            tr_br_artikala = tr_br_artikala + 1;
+        tr_br_artikala = tr_br_artikala + 1;
 
     }
     Artikl izbaciArtiklSaKodom(String kodi){
         Artikl a= new Artikl();
         for(int i=0; i<tr_br_artikala; i++){
-                if (artikli[i].kod.equals(kodi)) {
-                    a=artikli[i];
-                    for(int j=i; j<tr_br_artikala; j++) {
-                        artikli[i]=artikli[j];
+            if (artikli[i].kod.equals(kodi)) {
+                a=artikli[i];
+                for(int j=i; j<tr_br_artikala; j++) {
+                    artikli[i]=artikli[j];
                 }
-                    tr_br_artikala=tr_br_artikala-1;
+                tr_br_artikala=tr_br_artikala-1;
             }
         }
         return a;
